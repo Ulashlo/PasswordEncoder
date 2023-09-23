@@ -17,7 +17,7 @@
     <string name="enter_key_toast">Введите ключ!</string>
     <string name="key_too_long_toast">Ключ слишком длинный!</string>
     <string name="unable_encode_toast">Секрет невозможно закодировать!</string>
-    <string name="unable_decode_toast">Секрет невозможно раскодировать! Возможно, вы ввели неверный ключ или пытаетесь просканировать неверный QRCode</string>
+    <string name="unable_decode_toast">Секрет невозможно раскодировать!</string>
     <string name="generate_qrcode_reminder_toast">Сначала сгенерируйте QR Code!</string>
     <string name="save_qrcode_toast">QRCode сохранен!</string>
     <string name="nothing_to_copy_toast">Нет данных для копирования!</string>
