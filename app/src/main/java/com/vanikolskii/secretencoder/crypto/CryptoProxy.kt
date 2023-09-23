@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder.crypto
+package com.vanikolskii.secretencoder.crypto
 
 class CryptoProxy(private val crypto: Crypto) {
 

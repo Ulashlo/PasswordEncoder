@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder.barcode
+package com.vanikolskii.secretencoder.barcode
 
 import android.annotation.SuppressLint
 import android.app.Activity

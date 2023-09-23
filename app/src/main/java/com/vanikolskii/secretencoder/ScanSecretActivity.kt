@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder
+package com.vanikolskii.secretencoder
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -11,9 +11,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
-import com.vanikolskii.passwordencoder.contracts.ScanResultContract
-import com.vanikolskii.passwordencoder.crypto.AESCipher
-import com.vanikolskii.passwordencoder.crypto.CryptoProxy
+import com.vanikolskii.secretencoder.contracts.ScanResultContract
+import com.vanikolskii.secretencoder.crypto.AESCipher
+import com.vanikolskii.secretencoder.crypto.CryptoProxy
 
 
 class ScanSecretActivity : AppCompatActivity() {

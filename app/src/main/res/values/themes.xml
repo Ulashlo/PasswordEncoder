@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.PasswordEncoder" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.SecretEncoder" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.PasswordEncoder" parent="Base.Theme.PasswordEncoder" />
+    <style name="Theme.SecretEncoder" parent="Base.Theme.SecretEncoder" />
 </resources>

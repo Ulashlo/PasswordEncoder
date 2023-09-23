@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.vanikolskii.passwordencoder",
+  "applicationId": "com.vanikolskii.secretencoder",
   "variantName": "release",
   "elements": [
     {

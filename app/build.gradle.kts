@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.vanikolskii.passwordencoder"
+    namespace = "com.vanikolskii.secretencoder"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.vanikolskii.passwordencoder"
+        applicationId = "com.vanikolskii.secretencoder"
         minSdk = 28
         targetSdk = 33
         versionCode = 1

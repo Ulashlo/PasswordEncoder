@@ -1,10 +1,10 @@
-package com.vanikolskii.passwordencoder.contracts
+package com.vanikolskii.secretencoder.contracts
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
-import com.vanikolskii.passwordencoder.ScannerActivity
+import com.vanikolskii.secretencoder.ScannerActivity
 
 class ScanResultContract : ActivityResultContract<Unit, ScanResult>() {
     override fun createIntent(context: Context, input: Unit): Intent {

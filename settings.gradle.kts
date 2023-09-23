@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PasswordEncoder"
+rootProject.name = "SecretEncoder"
 include(":app")

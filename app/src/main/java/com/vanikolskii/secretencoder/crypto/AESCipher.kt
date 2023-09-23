@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder.crypto
+package com.vanikolskii.secretencoder.crypto
 
 import java.security.spec.KeySpec
 import java.util.Base64

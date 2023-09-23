@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder.barcode
+package com.vanikolskii.secretencoder.barcode
 
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.common.BitMatrix

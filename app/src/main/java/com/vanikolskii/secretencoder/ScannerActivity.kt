@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder
+package com.vanikolskii.secretencoder
 
 import android.Manifest
 import android.app.Activity
@@ -15,9 +15,9 @@ import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.vanikolskii.passwordencoder.barcode.BarcodeAnalyzer
-import com.vanikolskii.passwordencoder.contracts.ScanResultContract
-import com.vanikolskii.passwordencoder.databinding.ActivityScanerBinding
+import com.vanikolskii.secretencoder.barcode.BarcodeAnalyzer
+import com.vanikolskii.secretencoder.contracts.ScanResultContract
+import com.vanikolskii.secretencoder.databinding.ActivityScanerBinding
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 

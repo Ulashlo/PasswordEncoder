@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder
+package com.vanikolskii.secretencoder
 
 import android.content.Intent
 import android.os.Bundle

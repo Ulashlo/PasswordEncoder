@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder.barcode
+package com.vanikolskii.secretencoder.barcode
 
 import android.graphics.Bitmap
 import android.graphics.Color

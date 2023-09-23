@@ -1,4 +1,4 @@
-package com.vanikolskii.passwordencoder
+package com.vanikolskii.secretencoder
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -10,9 +10,9 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.vanikolskii.passwordencoder.barcode.ZxingBarcodeGenerator
-import com.vanikolskii.passwordencoder.crypto.AESCipher
-import com.vanikolskii.passwordencoder.crypto.CryptoProxy
+import com.vanikolskii.secretencoder.barcode.ZxingBarcodeGenerator
+import com.vanikolskii.secretencoder.crypto.AESCipher
+import com.vanikolskii.secretencoder.crypto.CryptoProxy
 import java.io.File
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat

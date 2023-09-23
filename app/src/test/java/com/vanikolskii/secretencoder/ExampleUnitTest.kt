@@ -1,7 +1,7 @@
-package com.vanikolskii.passwordencoder
+package com.vanikolskii.secretencoder
 
-import com.vanikolskii.passwordencoder.crypto.AESCipher
-import com.vanikolskii.passwordencoder.crypto.CryptoProxy
+import com.vanikolskii.secretencoder.crypto.AESCipher
+import com.vanikolskii.secretencoder.crypto.CryptoProxy
 import org.junit.Test
 
 import org.junit.Assert.*
