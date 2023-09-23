@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Сокрытель секретов</string>
+    <string name="start_scanner_text">Сканировать QR Code</string>
+    <string name="return_button_description">Вернуться</string>
+    <string name="quiet_button_description">Выйти</string>
+    <string name="create_qr_code_text">Сгенерировать QR Code</string>
+    <string name="scan_qr_code_text">Сканировать QR Code</string>
+    <string name="secret_text_label">Введите секрет:</string>
+    <string name="generate_command">Сгенерировать!</string>
+    <string name="qr_code_description">Сгенерированный QR Code</string>
+    <string name="download_text">Сохранить на устройстве</string>
+    <string name="type_key_text">Введите ключ:</string>
+    <string name="copy_text">Скопировать</string>
+    <string name="placeholder_text">Мишень</string>
+    <string name="enter_encode_secret_toast">Введите секрет, необходимый для сокрытия!</string>
+    <string name="encode_secret_too_long_toast">Секрет слишком длинный!</string>
+    <string name="enter_key_toast">Введите ключ!</string>
+    <string name="key_too_long_toast">Ключ слишком длинный!</string>
+    <string name="unable_encode_toast">Секрет невозможно закодировать!</string>
+    <string name="unable_decode_toast">Секрет невозможно раскодировать! Возможно, вы ввели неверный ключ или пытаетесь просканировать неверный QRCode</string>
+    <string name="generate_qrcode_reminder_toast">Сначала сгенерируйте QR Code!</string>
+    <string name="save_qrcode_toast">QRCode сохранен!</string>
+    <string name="nothing_to_copy_toast">Нет данных для копирования!</string>
+    <string name="secret_copied_toast">Секрет скопирован!</string>
+    <string name="scan_error_toast">QRCode не удалось распознать!</string>
+    <string name="permission_denied_toast">Нет прав на использование камеры!</string>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Secret encoder</string>
+    <string name="start_scanner_text">Scan QR Code</string>
+    <string name="return_button_description">Return</string>
+    <string name="quiet_button_description">Quiet</string>
+    <string name="create_qr_code_text">Generate QR Code</string>
+    <string name="scan_qr_code_text">Scan QR Code</string>
+    <string name="secret_text_label">Enter your secret:</string>
+    <string name="generate_command">Generate!</string>
+    <string name="qr_code_description">Generated QR Code</string>
+    <string name="download_text">Download</string>
+    <string name="type_key_text">Type your key:</string>
+    <string name="copy_text">Copy</string>
+    <string name="placeholder_text">Placeholder</string>
+    <string name="enter_encode_secret_toast">Type your secret for encode!</string>
+    <string name="encode_secret_too_long_toast">Your secret too long!</string>
+    <string name="enter_key_toast">Type your key!</string>
+    <string name="key_too_long_toast">Type your key!</string>
+    <string name="unable_encode_toast">Unable to encode!</string>
+    <string name="unable_decode_toast">Unable to decode!</string>
+    <string name="generate_qrcode_reminder_toast">Firstly generate QR Code!</string>
+    <string name="save_qrcode_toast">QRCode saved!</string>
+    <string name="nothing_to_copy_toast">Nothing to copy!</string>
+    <string name="secret_copied_toast">Copied to clipboard!</string>
+    <string name="scan_error_toast">QRCode is not recognized!</string>
+    <string name="permission_denied_toast">Permission to photo denied!</string>
+</resources>
