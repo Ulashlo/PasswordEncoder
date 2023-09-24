@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.os.Bundle
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -11,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.vanikolskii.secretencoder.contracts.ScanResultContract
 import com.vanikolskii.secretencoder.crypto.AESCipher
 import com.vanikolskii.secretencoder.crypto.CryptoProxy
@@ -22,6 +24,7 @@ class ScanSecretActivity : AppCompatActivity() {
     private lateinit var keyET: EditText
     private lateinit var resultTV: TextView
     private lateinit var returnBt: ImageButton
+    private lateinit var layout: ConstraintLayout
 
     private var activityLauncher: ActivityResultLauncher<Unit> = registerForActivityResult(
         ScanResultContract()
@@ -61,6 +64,7 @@ class ScanSecretActivity : AppCompatActivity() {
         keyET = findViewById(R.id.keyForScanET)
         resultTV = findViewById(R.id.resultTV)
         returnBt = findViewById(R.id.returnFromScanPasswordBt)
+        layout = findViewById(R.id.scanSecretLayout)
 
         startScannerBt.setOnClickListener {
             val key = keyET.text.toString()
@@ -71,6 +75,7 @@ class ScanSecretActivity : AppCompatActivity() {
             }
             resultTV.text = ""
             activityLauncher.launch(Unit)
+            closeKeyboard()
         }
 
         copyBt.setOnClickListener {
@@ -88,8 +93,25 @@ class ScanSecretActivity : AppCompatActivity() {
             Log.i(TAG, "Secret copied to clipboard")
         }
 
+        layout.setOnClickListener {
+            closeKeyboard()
+        }
+
         returnBt.setOnClickListener {
             finish()
+        }
+    }
+
+    private fun closeKeyboard() {
+        val view = this.currentFocus
+        if (view != null) {
+            val manager = getSystemService(
+                INPUT_METHOD_SERVICE
+            ) as InputMethodManager
+            manager
+                .hideSoftInputFromWindow(
+                    view.windowToken, 0
+                )
         }
     }
 

@@ -4,12 +4,14 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.vanikolskii.secretencoder.barcode.ZxingBarcodeGenerator
 import com.vanikolskii.secretencoder.crypto.AESCipher
 import com.vanikolskii.secretencoder.crypto.CryptoProxy
@@ -26,6 +28,7 @@ class CreateQRCodeActivity : AppCompatActivity() {
     private lateinit var generateQRCodeBt: Button
     private lateinit var downloadQRCodeBt: Button
     private lateinit var qrCodeIV: ImageView
+    private lateinit var layout: ConstraintLayout
 
     private var currentQRCode: Bitmap? = null;
 
@@ -39,6 +42,7 @@ class CreateQRCodeActivity : AppCompatActivity() {
         generateQRCodeBt = findViewById(R.id.generateQRCodeBt)
         downloadQRCodeBt = findViewById(R.id.downloadQRCodeBT)
         qrCodeIV = findViewById(R.id.qrCodeIV)
+        layout = findViewById(R.id.createQRCodeLayout)
 
         generateQRCodeBt.setOnClickListener {
             val secret = secretET.text.toString()
@@ -77,7 +81,8 @@ class CreateQRCodeActivity : AppCompatActivity() {
             val generator = ZxingBarcodeGenerator()
             val image = generator.generateQRCode(data, r)
             qrCodeIV.setImageBitmap(generator.convertBitMatrixToBitmap(image, false))
-            currentQRCode = generator.convertBitMatrixToBitmap(image, true);
+            currentQRCode = generator.convertBitMatrixToBitmap(image, true)
+            closeKeyboard()
             Log.i(TAG, String.format("Encoded successfully. Secret: %s, key: %s", secret, key))
         }
 
@@ -105,6 +110,10 @@ class CreateQRCodeActivity : AppCompatActivity() {
             }
         }
 
+        layout.setOnClickListener {
+            closeKeyboard()
+        }
+
         returnBt.setOnClickListener {
             finish()
         }
@@ -117,6 +126,19 @@ class CreateQRCodeActivity : AppCompatActivity() {
             width * 4 / 5
         } else {
             height * 2 / 5
+        }
+    }
+
+    private fun closeKeyboard() {
+        val view = this.currentFocus
+        if (view != null) {
+            val manager = getSystemService(
+                INPUT_METHOD_SERVICE
+            ) as InputMethodManager
+            manager
+                .hideSoftInputFromWindow(
+                    view.windowToken, 0
+                )
         }
     }
 

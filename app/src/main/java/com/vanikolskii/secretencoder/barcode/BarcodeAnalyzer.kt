@@ -2,29 +2,32 @@ package com.vanikolskii.secretencoder.barcode
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.graphics.Rect
 import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage
+import java.lang.Integer.min
 
 class BarcodeAnalyzer(val callback: (String, Int) -> Unit) :
     ImageAnalysis.Analyzer {
 
     @SuppressLint("UnsafeOptInUsageError")
     override fun analyze(imageProxy: ImageProxy) {
-//        val w = imageProxy.width
-//        val h = imageProxy.height
-//        val r = (min(w, h) + 0.8).toInt();
-//
-//        imageProxy.setCropRect(
-//            Rect(
-//                (w - r) / 2,
-//                (h - r) / 2,
-//                (w + r) / 2,
-//                (h + r) / 2,
-//            )
-//        )
+        // TODO: Enable crop image
+        val w = imageProxy.width
+        val h = imageProxy.height
+        val r = (min(w, h) + 0.8).toInt();
+
+        imageProxy.setCropRect(
+            Rect(
+                (w - r) / 2,
+                (h - r) / 2,
+                (w + r) / 2,
+                (h + r) / 2,
+            )
+        )
 
         val mediaImage = imageProxy.image
         if (mediaImage == null) {
