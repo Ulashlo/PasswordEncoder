@@ -38,9 +38,9 @@ class AESCipher : Crypto {
 
     companion object {
         val salt =
-            "wdvw54vf$%ve54h5_r!be1v5rtb5evvrwcsvsedxfgrsgdfhgvdset!vsdvbfdhrg".encodeToByteArray()
+            "some_salt".encodeToByteArray()
         val ivSpec = IvParameterSpec(
-            byteArrayOf(-71, -62, 113, -108, 96, -79, 71, 39, 44, 118, 6, 100, 15, 102, 108, 21)
+            byteArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
         )
     }
 }
